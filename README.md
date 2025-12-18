@@ -21,9 +21,6 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 
 **Bioinformatics & Data Analysis**
 
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Biopython](https://img.shields.io/badge/Biopython-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 **Specialized Skills**
@@ -45,7 +42,7 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 - Implemented core bioinformatics algorithms based on fundamental Python programming concepts
 - Created user-friendly interface for researchers and data analysts
 - Utilized object-oriented programming principles for scalable, maintainable code
-- 🔗 [View Repository](https://github.com/fahad-sajjad/propylia)
+
 
 ### Project: RNA-Seq Biomarkers for Colorectal Cancer Classification
 
@@ -57,8 +54,8 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 - Performed differential gene expression analysis and statistical validation
 - Conducted GO (Gene Ontology) and KEGG (Kyoto Encyclopedia of Genes and Genomes) pathway enrichment analysis
 - Achieved significant predictive accuracy for cancer classification
-- Technologies: Python, Pandas, Scikit-learn, GEO Database, GO/KEGG Analysis
-- 🔗 [View Repository](https://github.com/fahad-sajjad/rna-seq-biomarkers)
+- Technologies: Python, R, GEO Database, GO/KEGG Analysis
+-
 
 ---
 
@@ -76,7 +73,10 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fahad-sajjad&show_icons=true&theme=default&hide_border=false)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fahad-sajjad&layout=compact&theme=default)
+### Language Distribution
+
+![Python](https://img.shields.io/badge/Python-60%25-3776AB?style=for-the-badge)
+![R](https://img.shields.io/badge/R-40%25-276DC3?style=for-the-badge)
 
 ---
 
