@@ -67,9 +67,6 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 
 ---
 
-## GitHub Statistics
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fahad-sajjad&show_icons=true&theme=default&hide_border=false)
 
 ### Language Distribution
 
