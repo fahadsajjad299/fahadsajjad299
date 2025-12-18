@@ -16,7 +16,8 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 **Bioinformatics & Data Analysis**
 
@@ -44,7 +45,7 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 - Implemented core bioinformatics algorithms based on fundamental Python programming concepts
 - Created user-friendly interface for researchers and data analysts
 - Utilized object-oriented programming principles for scalable, maintainable code
-- 
+- 🔗 [View Repository](https://github.com/fahad-sajjad/propylia)
 
 ### Project: RNA-Seq Biomarkers for Colorectal Cancer Classification
 
@@ -54,9 +55,10 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 - Processed and analyzed RNA-Seq expression data from colorectal cancer samples
 - Implemented machine learning algorithms for biomarker identification and classification
 - Performed differential gene expression analysis and statistical validation
+- Conducted GO (Gene Ontology) and KEGG (Kyoto Encyclopedia of Genes and Genomes) pathway enrichment analysis
 - Achieved significant predictive accuracy for cancer classification
-- Technologies: R, GEO Database Analysis
-
+- Technologies: Python, Pandas, Scikit-learn, GEO Database, GO/KEGG Analysis
+- 🔗 [View Repository](https://github.com/fahad-sajjad/rna-seq-biomarkers)
 
 ---
 
@@ -78,6 +80,16 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 
 ---
 
+## Education
+
+**Bachelor of Science (BSc) in Bioinformatics**
+
+Agriculture University Peshawar, Pakistan
+
+**CGPA: 3.6/4.0**
+
+---
+
 ## Research Interests
 
 - Bioinformatics and Computational Biology
@@ -93,7 +105,7 @@ Results-driven Bioinformatician with strong expertise in computational biology a
 - 💼 [LinkedIn Profile](https://www.linkedin.com/in/fahad-sajjad-299pak)
 - 📧 [Personal Email](mailto:fahadsajjad299@gmail.com)
 - 📧 [University Email](mailto:fahadsajjadbioinfo@aup.edu.pk)
-- 🐙 [GitHub Profile](https://github.com/fahadsajjad299)
+- 🐙 [GitHub Profile](https://github.com/fahad-sajjad)
 
 ---
 
