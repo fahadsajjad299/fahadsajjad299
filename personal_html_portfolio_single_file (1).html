@@ -1,148 +1,586 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fahad Sajjad — Bioinformatics Portfolio</title>
-  <meta name="description" content="Portfolio of Fahad Sajjad — Bioinformatics projects, skills, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#7c3aed;--glass: rgba(255,255,255,0.04);font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
-    *{box-sizing:border-box} html,body{height:100%;margin:0;color:#e6eef8;
-      background: linear-gradient(180deg,var(--bg),#071029), url('https://i.ibb.co/4dN8zTc/dna-bg.png') center/cover no-repeat;
-    }
-    .container{max-width:1100px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:18px} .avatar{width:110px;height:110px;border-radius:18px;overflow:hidden;flex:0 0 110px;box-shadow:0 6px 18px rgba(2,6,23,0.7)}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block} h1{margin:0;font-size:28px} p.lead{margin:6px 0 0;color:var(--muted)} nav{margin-left:auto} nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.05),transparent);border-radius:14px;border:1px solid rgba(255,255,255,0.05)}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:20px}
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .about{grid-column:span 7} .sidebar{grid-column:span 5}
-    .section-title{font-weight:700;margin-bottom:10px} .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px} .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,var(--glass),transparent);min-height:120px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px} .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04);font-weight:600;color:var(--muted);}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px} .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#4f46e5);color:white;text-decoration:none;font-weight:700} .muted{color:var(--muted)}
-    @media (max-width:900px){.about{grid-column:span 12}.sidebar{grid-column:span 12}header{flex-direction:column;align-items:flex-start}nav{margin-left:0;margin-top:12px}}
-    /* Interactive effects */
-    .project:hover{transform:translateY(-6px);transition:0.3s;box-shadow:0 12px 24px rgba(0,0,0,0.35)}
-    .skill:hover{background:var(--accent);color:#fff;transition:0.3s;cursor:pointer}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahad Sajjad - Bioinformatician Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 40px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 60px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid white;
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .name {
+            color: white;
+            font-size: 3em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            color: #a8dadc;
+            font-size: 1.5em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .bio {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            padding: 60px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.8s; }
+        .section:nth-child(2) { animation-delay: 1s; }
+        .section:nth-child(3) { animation-delay: 1.2s; }
+        .section:nth-child(4) { animation-delay: 1.4s; }
+        .section:nth-child(5) { animation-delay: 1.6s; }
+        .section:nth-child(6) { animation-delay: 1.8s; }
+        .section:nth-child(7) { animation-delay: 2s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #1a1a2e;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #1a1a2e;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: #fafafa;
+            padding: 25px;
+            border-left: 4px solid #16213e;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            background: #f0f0f0;
+            border-left-width: 6px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #16213e;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .info-value {
+            color: #2c3e50;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        .experience-item {
+            margin-bottom: 35px;
+            padding: 30px;
+            background: #fafafa;
+            border-left: 4px solid #16213e;
+        }
+
+        .experience-title {
+            font-size: 1.3em;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .experience-company {
+            color: #16213e;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .experience-location {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .experience-description {
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: #fafafa;
+            padding: 25px;
+            border-left: 4px solid #16213e;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            color: #16213e;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 8px 0;
+            color: #2c3e50;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-list li:before {
+            content: "▪";
+            color: #16213e;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .education-item {
+            padding: 25px;
+            margin-bottom: 20px;
+            background: #fafafa;
+            border-left: 4px solid #16213e;
+        }
+
+        .education-degree {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .education-institution {
+            color: #16213e;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .education-details {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .achievement-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .achievement-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #fafafa;
+            border-left: 4px solid #16213e;
+            color: #2c3e50;
+        }
+
+        .achievement-item:before {
+            content: "🏆";
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            background: #fafafa;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: #16213e;
+            background: white;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: #16213e;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9em;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .contact-value {
+            color: #2c3e50;
+            word-break: break-word;
+        }
+
+        .contact-value a {
+            color: #16213e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #457b9d;
+        }
+
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .language-item {
+            background: #fafafa;
+            padding: 20px 30px;
+            border-left: 4px solid #16213e;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #16213e;
+            margin-bottom: 5px;
+        }
+
+        .language-level {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 50px 30px;
+            }
+
+            .content {
+                padding: 40px 30px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .title {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 1.6em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar"><img src="profile.jpg" alt="Profile photo — replace profile.jpg" /></div>
-      <div>
-        <h1>Fahad Sajjad
-          <div style="font-size:14px;color:var(--muted);font-weight:600">Bioinformatics • Web Dev • Problem Solver</div>
-        </h1>
-        <p class="lead">I'm a passionate bioinformatician combining computational biology, coding, and data analysis to solve real-world biological problems.</p>
-      </div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero card">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-          <div>
-            <h2 style="margin:0">Hello, I'm Fahad — Bioinformatics Explorer</h2>
-            <p class="muted" style="margin:8px 0">I design intelligent tools for analyzing biological sequences and visualizing data. My work bridges biology and technology with interactive, user-friendly web apps.</p>
-            <div style="margin-top:12px;display:flex;gap:10px">
-              <a class="btn" href="#projects">See my work</a>
-              <a class="btn" href="resume.pdf" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600">Download CV</a>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.imgur.com/placeholder.jpg" alt="Fahad Sajjad" class="profile-img" id="profileImg">
+            <div class="header-content">
+                <h1 class="name">Fahad Sajjad</h1>
+                <div class="title">Bioinformatics Student & AI Enthusiast</div>
+                <p class="bio">6th-semester Bioinformatics student at Agriculture University Peshawar, combining biological sciences with computational approaches. Passionate about leveraging Machine Learning and Artificial Intelligence in bioinformatics and life sciences research, with 1+ year of hands-on experience in Python programming and expanding expertise in R programming for statistical analysis and biological data visualization.</p>
             </div>
-          </div>
-          <div style="max-width:420px">
-            <pre style="white-space:pre-wrap;margin:0;padding:12px;background:rgba(0,0,0,0.25);border-radius:8px;font-size:13px;color:#dbeafe">// Interactive bioinformatics example
-const tools = ['Python','BLAST','Clustal','MEGA','HTML','CSS','JS'];
-tools.forEach(tool =&gt; console.log(`${tool} ready for analysis!`));</pre>
-          </div>
         </div>
-      </section>
 
-      <div class="grid">
-        <section class="about card">
-          <h3 class="section-title">About Me</h3>
-          <p>I'm a BSc Bioinformatics student from University of Agriculture Peshawar. I specialize in sequence analysis, molecular data visualization, and developing interactive bioinformatics tools. Passionate about coding, AI in biology, and building user-friendly applications for research.</p>
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Summary</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-label">Current Position</div>
+                        <div class="info-value">Tool Developer Intern at Abasyn University</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Specialization</div>
+                        <div class="info-value">Bioinformatics, AI & Machine Learning</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Education</div>
+                        <div class="info-value">BSc (Hons) Bioinformatics | CGPA: 3.5/4.0</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">Peshawar, Khyber Pakhtunkhwa, Pakistan</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Date of Birth</div>
+                        <div class="info-value">March 8, 2005</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Nationality</div>
+                        <div class="info-value">Pakistani</div>
+                    </div>
+                </div>
+            </div>
 
-          <h4 style="margin-top:14px">Highlighted Projects</h4>
-          <div id="projects" class="projects">
-            <article class="project">
-              <h4 style="margin:0">Sequence Analyzer</h4>
-              <p class="muted" style="margin:8px 0 0">Web & CLI tool for multi-FASTA sequence analysis and visualization. <a href="#" class="muted">github.com/fahadsajjad/sequence-analyzer</a></p>
-            </article>
-            <article class="project">
-              <h4 style="margin:0">PAAC/APAAC Tool</h4>
-              <p class="muted" style="margin:8px 0 0">Implements Pseudo Amino Acid Composition calculations for protein feature extraction. <a href="#" class="muted">github.com/fahadsajjad/paac</a></p>
-            </article>
-            <article class="project">
-              <h4 style="margin:0">Bioinformatics Web GUI</h4>
-              <p class="muted" style="margin:8px 0 0">Interactive GUI for sequence input, analysis, and visualization with real-time results.</p>
-            </article>
-          </div>
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Tool Developer (Internship)</div>
+                    <div class="experience-company">Computational Lab, Abasyn University</div>
+                    <div class="experience-location">Peshawar, K.P.K, Pakistan | June 2024 - Present</div>
+                    <div class="experience-description">
+                        Developed <strong>Propylia</strong>, a GUI-based bioinformatics tool for protein feature extraction that generates machine learning-ready descriptors for functional prediction. The tool streamlines the process of analyzing protein sequences and preparing them for computational modeling. Working under the supervision of Dr. Sajjad Ahmad, focusing on creating user-friendly interfaces for complex bioinformatics workflows.
+                    </div>
+                </div>
 
-          <h4 style="margin-top:14px">Education & Awards</h4>
-          <ul class="muted">
-            <li>BSc (Hons) Bioinformatics — University of Agriculture, Peshawar</li>
-            <li>Top Student in Computational Biology Workshop — 2025</li>
-          </ul>
-        </section>
+                <div class="experience-item">
+                    <div class="experience-title">R Programming Language Intern</div>
+                    <div class="experience-company">Remote Internship</div>
+                    <div class="experience-location">Remote (Italy) | July 2025 - December 2025</div>
+                    <div class="experience-description">
+                        Comprehensive training in R programming from beginner to advanced levels. Progressed from R Studio installation through complex assignments, culminating in a capstone project on <strong>Exploring RNA-Seq derived Biomarkers for Colorectal Cancer Classification via Machine Learning</strong>. Gained expertise in statistical analysis, data visualization, and bioinformatics applications using R.
+                    </div>
+                </div>
 
-        <aside class="sidebar card">
-          <h3 class="section-title">Skills</h3>
-          <div id="skills" class="skills">
-            <span class="skill">Python</span>
-            <span class="skill">BLAST</span>
-            <span class="skill">Clustal</span>
-            <span class="skill">MEGA</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Data Analysis</span>
-            <span class="skill">Machine Learning</span>
-          </div>
+                <div class="experience-item">
+                    <div class="experience-title">Trainee - Advanced Python & Applications</div>
+                    <div class="experience-company">University of Engineering and Technology, Peshawar</div>
+                    <div class="experience-location">Peshawar, K.P.K, Pakistan | August 2024 - October 2024</div>
+                    <div class="experience-description">
+                        Completed intensive three-month advanced Python course sponsored by NAVTTC (National Vocational & Technical Training Commission) and CISCO-PCAP. Mastered Python programming through hands-on projects and in-depth studies, exploring various frameworks and libraries. Complemented the training with Coursera's Python for Genomic Data Science course to strengthen bioinformatics-specific programming skills.
+                    </div>
+                </div>
+            </div>
 
-          <h3 style="margin-top:18px" class="section-title">Contact</h3>
-          <p class="muted">Email: <a href="mailto:fahadsajjad299@gmail.com" class="muted">fahadsajjad299@gmail.com</a></p>
-          <p class="muted">Location: Peshawar, Pakistan</p>
+            <div class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Programming Languages</div>
+                        <ul class="skill-list">
+                            <li>Python (1+ year experience)</li>
+                            <li>R Programming</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Bioinformatics Tools</div>
+                        <ul class="skill-list">
+                            <li>Data Retrieval & Analysis</li>
+                            <li>Sequence Alignments</li>
+                            <li>Phylogenetic Tree Construction</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Databases</div>
+                        <ul class="skill-list">
+                            <li>NCBI</li>
+                            <li>GenBank</li>
+                            <li>UniProt</li>
+                            <li>EMBL</li>
+                            <li>DDBJ</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Research Areas</div>
+                        <ul class="skill-list">
+                            <li>Machine Learning</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Computational Biology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="#contact" style="background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted)">Get in touch</a>
-            <a class="btn" href="#" style="background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted)">GitHub</a>
-          </div>
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="education-degree">BSc (Hons) in Bioinformatics</div>
+                    <div class="education-institution">Agriculture University of Peshawar</div>
+                    <div class="education-details">November 2023 - 2027 (Expected) | Peshawar, K.P.K, Pakistan<br>Current CGPA: 3.5/4.0 | 6th Semester</div>
+                </div>
 
-          <h3 style="margin-top:18px" class="section-title">Quick Links</h3>
-          <ul class="muted">
-            <li><a href="#" class="muted">GitHub</a></li>
-            <li><a href="#" class="muted">LinkedIn</a></li>
-            <li><a href="#" class="muted">Resume (PDF)</a></li>
-          </ul>
-        </aside>
-      </div>
+                <div class="education-item">
+                    <div class="education-degree">FSc (Pre-Medical)</div>
+                    <div class="education-institution">Army Public School and College Boys, Peshawar</div>
+                    <div class="education-details">2021 - 2023 | Peshawar, K.P.K, Pakistan</div>
+                </div>
 
-      <section id="contact" class="card" style="margin-top:18px">
-        <h3 class="section-title">Contact Me</h3>
-        <p class="muted">Prefer email? Use the button to open a mail client or send your message below.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="mailto:fahadsajjad299@gmail.com?subject=Portfolio%20Contact">Email me</a>
-          <form style="flex:1;min-width:260px;display:flex;gap:8px;align-items:center">
-            <input placeholder="Your email" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-            <input placeholder="Message" style="flex:2;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-            <button class="btn" type="button">Send</button>
-          </form>
+                <div class="education-item">
+                    <div class="education-degree">Matriculation (Science Group)</div>
+                    <div class="education-institution">Army Public School and College Boys, Peshawar</div>
+                    <div class="education-details">2019 - 2021 | Peshawar, K.P.K, Pakistan</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <ul class="achievement-list">
+                    <li class="achievement-item">Nominated for Prime Minister Youth Laptop Scheme 2025 (Phase-IV)</li>
+                    <li class="achievement-item">Certified Information Technology Specialist: Python (Certiport - A Pearson VUE Business)</li>
+                    <li class="achievement-item">NAVTTC Advanced Python & Application Course Completion Certificate</li>
+                    <li class="achievement-item">Coursera: Python for Genomic Data Science</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <div class="language-name">Pashto</div>
+                        <div class="language-level">Native / Mother Tongue</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Urdu</div>
+                        <div class="language-level">Fluent / Professional Working Proficiency</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">English</div>
+                        <div class="language-level">Fluent / Professional Working Proficiency</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="mailto:fahadsajjadbioinfo@aup.edu.pk">fahadsajjadbioinfo@aup.edu.pk</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value"><a href="https://www.linkedin.com/in/fahad-sajjad-299pak" target="_blank">linkedin.com/in/fahad-sajjad-299pak</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value"><a href="https://github.com/fahadsajjad299" target="_blank">github.com/fahadsajjad299</a></div>
+                    </div>
+                </div>
+                
+                
+                <div style="margin-top: 30px; padding: 30px; background: #fafafa; border-left: 4px solid #16213e; text-align: center;">
+                    <h3 style="color: #16213e; margin-bottom: 20px; font-size: 1.3em;">Download CV</h3>
+                    <a href="Fahad_Sajjad_CV.pdf" download style="display: inline-block; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-size: 1.1em; transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', sans-serif;">
+                        📄 Download My CV
+                    </a>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.95em;">Click to download my complete curriculum vitae in PDF format</p>
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
 
-    </main>
-
-    <footer>
-      <p>Made with ❤️ • Fahad Sajjad • <span class="muted">Last updated: 11/14/2025</span></p>
-    </footer>
-  </div>
+    <script>
+        // Load the uploaded image
+        window.addEventListener('DOMContentLoaded', function() {
+            const img = document.getElementById('profileImg');
+            // The image will be loaded from the uploaded file
+            // For now, keeping the functional click-to-upload feature
+            img.addEventListener('click', function() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+                input.onchange = function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            img.src = event.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                };
+                input.click();
+            });
+        });
+    </script>
 </body>
 </html>
